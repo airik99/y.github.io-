@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"> 
+    
+    <title> Reclamos </title>
+</head>
+<body>
+
+    <header>
+        <h1> y clothing </h1>
+    </header>
+
+    <nav> 
+        <a href="index.html"> Home </a>
+        <a href="#seccion1"> Productos </a> <!--sirve para no tener que ir a otra página, simplemente se desplaza para abajo-->
+        <a href="#seccion2"> Contacto </a>
+        <a href="Reclamos.html"> Reclamos </a>
+    </nav>
+
+    <form action="">
+        <!-- Agrupación de campos -->
+        <fieldset>
+            <legend>Datos personales</legend>
+    
+            <p>Nombre de usuario: <input type="text" name="nombre" placeholder="Por ej: John Smith" /></p>
+    
+            <!-- Campo numérico -->
+            <p>Edad: <input type="number" name="edad" min="18" max="100" placeholder="18" /></p>
+    
+            <!-- Botón radio de opción -->
+            <p><label for="">Sexo:</label>
+                <input type="radio" name="sexo" value="M"> Mujer
+                <input type="radio" name="sexo" value="H" /> Hombre
+                <input type="radio" name="sexo" value="O"> Otro
+            </p>
+
+            <p><label for="">Rango de algo:</label></p>
+            <input type="range" min="1" max="10">
+
+            <p><label>Nombre: <input type="text" name="nombre"
+                maxlength="15"></label></p>
+                <p><label><input type="checkbox" name="edad15" value="15"> 15
+                Años</label></p>
+                <p><label><input type="checkbox" name="edad30" value="30"> 30
+                Años</label></p>
+                <p><label><input type="checkbox" name="edad45" value="45"> 45
+                Años</label></p>
+                <p><label><input type="checkbox" name="edad60" value="60"> 60
+                Años</label></p>
+                
+            </p>
+            <p>Nacimiento: <input type="date" name="" id=""></p>
+            <p>Hora: <input type="time" name="" id=""></p>
+
+            <p>
+                <input type="submit" value="Enviar"> 
+                <input type="reset" value="Borrar">
+            </p>
+    </form>
+</body>
+</html>
+
