@@ -10,9 +10,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"> 
-        <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico"> <!-- esto no anda-->
 
+        <script src="index.js"></script>
         <title>y clothing</title> 
+               
     </head>
     <body>
         <header>
@@ -21,31 +23,58 @@
 
         <nav> 
             <a href="index.html"> Home </a>
-            <a href="#seccion1"> Productos </a> <!--sirve para no tener que ir a otra página, simplemente se desplaza para abajo-->
+            <a href="#seccion1"> Productos </a> 
             <a href="#seccion2"> Contacto </a>
+            <a href="sobre_nosotros.html"> Sobre Nosotros </a>
             <a href="reclamos.html"> Reclamos </a>
         </nav>
 
         <section id="seccion1">
             <h2>Productos</h2>
-            <div>
-                <img src="./Imagenes/remera_blanca.jpg" alt="remera_blanca">
-                <img src="Imagenes/campera.jpg" alt="campera">
-                <img src="Imagenes/buzo.jpg" alt="buzo">
-            </div>
-
-            <div>
-                <img src="Imagenes/pollera.jpeg" alt="pollera">
-                <img src="Imagenes/camiseta.webp" alt="camiseta">
-                <img src="Imagenes/buzoverde.jpg" alt="buzoverde">
-            </div>
-        </section>
-
         <div class="container">
-            <div class="item item-1">item 1</div>
-            <div class="item item-2">item 2</div>
-            <div class="item item-3">item 3</div>
-        </div> 
+            <div class="container1"> 
+
+                <div class="item item-1">
+                    <img src="./Imagenes/remera_blanca.jpg" alt="remera_blanca">
+                    <p>Remera Basic</p>
+                    <p><b>$1.500</b></p>
+                </div> 
+
+                <div class="item item-2">
+                    <img src="Imagenes/campera.jpg" alt="campera">
+                    <p>Campera Foggy</p>
+                    <p><b>$4.000</b></p>
+                </div>
+
+                <div class="item item-3">
+                    <img src="Imagenes/buzo.jpg" alt="buzo">
+                    <p>Buzo Dark</p>
+                    <p><b>$4.500</b></p>
+                </div>
+            </div>
+
+            <div class="container1"> 
+
+                <div class="item item-1">
+                    <img src="Imagenes/pollera.jpeg" alt="pollera">
+                    <p>Pollera Kawaii</p>
+                    <p><b>$3.000</b></p>
+                </div> 
+
+                <div class="item item-2">
+                    <img src="Imagenes/camiseta.webp" alt="camiseta">
+                    <p>Camiseta Sky</p>
+                    <p><b>$2.000</b></p>
+                </div>
+
+                <div class="item item-3">
+                    <img src="Imagenes/buzoverde.jpg" alt="buzoverde">
+                    <p>Buzo Nature</p>
+                    <p><b>$4.900</b></p>
+                </div>
+            </div>
+        </div>
+        </section>
 
         <section id="seccion2">
             <h2>Contacto</h2>
@@ -62,8 +91,6 @@
                 <br>
                 <i class='bx bxl-facebook-square bx-md' style='color:#ffffff' ></i>
                 <a href="https://www.facebook.com/" target="_BLANK"> y clothing </a>
-                
-                
             </section>
 
         </section>
@@ -72,8 +99,5 @@
             <br>
             <p>Derechos reservados ®</p>
         </footer>
-
-        
-
     </body>
 </html>

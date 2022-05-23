@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"> 
+    <script src="index.js"></script>
     
-    <title> Reclamos </title>
+    <title> y clothing - Reclamos </title>
 </head>
 <body>
 
@@ -20,51 +21,99 @@
 
     <nav> 
         <a href="index.html"> Home </a>
-        <a href="#seccion1"> Productos </a> <!--sirve para no tener que ir a otra página, simplemente se desplaza para abajo-->
-        <a href="#seccion2"> Contacto </a>
-        <a href="Reclamos.html"> Reclamos </a>
+        <a href="index.html"> Productos </a> 
+        <a href="index.html"> Contacto </a>
+        <a href="sobre_nosotros.html"> Sobre Nosotros </a>
+        <a href="reclamos.html"> Reclamos </a>
     </nav>
 
-    <form action="">
-        <!-- Agrupación de campos -->
-        <fieldset>
-            <legend>Datos personales</legend>
-    
-            <p>Nombre de usuario: <input type="text" name="nombre" placeholder="Por ej: John Smith" /></p>
-    
-            <!-- Campo numérico -->
-            <p>Edad: <input type="number" name="edad" min="18" max="100" placeholder="18" /></p>
-    
-            <!-- Botón radio de opción -->
-            <p><label for="">Sexo:</label>
-                <input type="radio" name="sexo" value="M"> Mujer
-                <input type="radio" name="sexo" value="H" /> Hombre
-                <input type="radio" name="sexo" value="O"> Otro
-            </p>
+    <h3> Reclamos </h3>
 
-            <p><label for="">Rango de algo:</label></p>
-            <input type="range" min="1" max="10">
+    <div class="formulario">
+        <form name="formulario">
+          
+            <fieldset>
+                <legend>Formulario de Reclamo</legend>
 
-            <p><label>Nombre: <input type="text" name="nombre"
-                maxlength="15"></label></p>
-                <p><label><input type="checkbox" name="edad15" value="15"> 15
-                Años</label></p>
-                <p><label><input type="checkbox" name="edad30" value="30"> 30
-                Años</label></p>
-                <p><label><input type="checkbox" name="edad45" value="45"> 45
-                Años</label></p>
-                <p><label><input type="checkbox" name="edad60" value="60"> 60
-                Años</label></p>
+                <label for="NombreCompleto"><p>Nombre y Apellido</p></label>
+                <input type="text" name="nombre" placeholder="Por ej: John Smith" />
                 
-            </p>
-            <p>Nacimiento: <input type="date" name="" id=""></p>
-            <p>Hora: <input type="time" name="" id=""></p>
+                <label for="edad"><p>Fecha De Nacimiento</p></label>
+                <input type="number" name="edad" id="edad">
+                
+                <label for="mail"><p>Mail</p></label>
+                <input type="text" name="mail" placeholder="Por ej: jhonsmith@gmail.com" />
+        
+                <p><label for="">Tipo de Reclamo</label>
+                    <br>
+                    <input type="checkbox" name="tipoReclamo" value="M"> Mancha
+                    <br>
+                    <input type="checkbox" name="tipoReclamo" value="R" /> Rotura
+                    <br>
+                    <input type="checkbox" name="tipoReclamo" value="T"> Talle
+                    <br>
+                    <input type="checkbox" name="tipoReclamo" value="O"> Otro <input type="text" name="tipoReclamoOtro"/>
+                </p>
+                <p> <label for="">Agregue una descripción</label>
+                    <br>
+                    <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+                </p>
+    
+                <tr>
+                    <td colspan="2"><input type="button" value="Enviar" onclick="valida_envia()"></td>
+                </tr>
+        </form>
+    </div>
 
-            <p>
-                <input type="submit" value="Enviar"> 
-                <input type="reset" value="Borrar">
-            </p>
-    </form>
+    <script>
+        function valida_envia() {
+            if (document.formulario.nombre.value.length == 0) {
+                alert("Tiene que escribir su nombre")
+                document.formulario.nombre.focus()
+                return 0;
+            }
+
+            edad = document.formulario.edad.value
+            edad = validarEntero(edad)
+            document.formulario.edad.value = edad
+            if (edad == "") {
+                alert("Tiene que introducir un número entero en su edad.")
+                document.formulario.edad.focus()
+                return 0;
+            } else {
+                if (edad < 18) {
+                    alert("Debe ser mayor de 18 años para poder rellenar ese formulario.")
+                    document.formulario.edad.focus()
+                    return 0;
+                }
+            }
+
+            if (document.formulario.mail.value.length == 0) {
+                alert("Tiene que escribir su mail")
+                document.formulario.nombre.focus()
+                return 0;
+            }
+
+            if (document.formulario.descripcion.value.length == 0) {
+                alert("Debe agregar una descripción sobre el reclamo.")
+                document.formulario.descripcion.focus()
+                return 0;
+            }
+
+            alert("Su formulario se envió correctamente, pronto te contactaremos");
+            document.formulario.submit();
+        }
+
+        function validarEntero(valor) {
+            valor = parseInt(valor)
+            if (isNaN(valor)) {
+                return ""
+            } else {
+                return valor
+            }
+        }
+    </script>
+    
 </body>
 </html>
 

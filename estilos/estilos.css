@@ -1,7 +1,6 @@
 *{
     margin: 2px 2px;
     padding: 2;
-    text-align: center;
 }
 
 body {
@@ -13,51 +12,79 @@ nav {
     padding: 5px 5px;
     position: sticky;
     flex-flow: row wrap;
-}
-
-.container {
-    border: 5px solid salmon;
-    display: flex;
-    flex-direction: column;
-}
-
-.item {
-    border: 2px solid royalblue;
+    text-align: center;
 }
 
 nav a {
     color: black;
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+}
+
+.conocenos {
+    font-size: 25px;
+    margin: 30px;
+    padding: 10px;
+    align-content: flex-start;
 }
 
 nav a:hover {
     background: gray;
+    text-align: center;
 }
 
 h1 {
     font-size: 50px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 50px;
+    background-color: rgb(207, 204, 204);
+    text-align: center;
 }
 
 a {
     text-decoration: none;
     padding: 10px;
+    text-align: center;
+}
 
+#seccion1 {
+    text-align: center;
 }
 
 #seccion2 {
-    height: 41vh;
-    width: 100%;
-    padding: 15px;
+    height: 40%;
+    width: 98%;
+    padding: 1%;
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 #seccion2 a {
     color: white;
+    text-align: center;
 }
 
 #seccion1 img {
     height: 25vh;
+    text-align: center;
 }
+
+.conocenos img {
+    height: 50%;
+    width: 90%; 
+}
+
+footer {
+    text-align: center;
+}
+
 
 @media all and (max-width: 800px) {
     .nav {
@@ -79,4 +106,60 @@ a {
     .nav li:last-of-type a {
       border-bottom: none;
     }
-  }
+}
+
+@media only screen and (max-width: 600px) {
+    .container1 {
+        border: 5px/* solid salmon*/;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        flex-flow: column;
+        width: 90%;
+    }
+
+    .item {
+        border: 1px solid rgb(231, 229, 229);
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container1 {
+        border: 5px/* solid salmon*/;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        flex-flow: row;
+        width: 90%;
+    }
+
+    .item {
+        border: 1px solid rgb(231, 229, 229);
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container1 {
+        border: 5px/* solid salmon*/;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        flex-flow: row;
+        width: 50%;
+        padding-left: 10vh;
+        padding-right: 10vh;
+    }
+
+    .item {
+        border: 1px solid rgb(231, 229, 229);
+        width: 80%;
+        text-align: center;
+    }
+}
