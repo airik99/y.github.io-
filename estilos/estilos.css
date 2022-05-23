@@ -39,6 +39,16 @@ nav a:hover {
 h1 {
     font-size: 50px;
     text-align: center;
+    animation-duration: 2s;
+    animation-name: cambiarColorFondo;
+}
+
+@keyframes cambiarColorFondo {
+    0% {background-color: rgb(104, 97, 97);}
+    15% {background-color: rgb(119, 116, 116);}
+    25% {background-color: rgb(134, 130, 130);}
+    50% {background-color: rgb(190, 188, 188);}
+    100% {background-color: rgb(255, 255, 255);}
 }
 
 h3 {

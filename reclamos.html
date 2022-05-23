@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"> 
     <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <title> y clothing - Reclamos </title>
 </head>
@@ -38,7 +39,7 @@
                 <label for="NombreCompleto"><p>Nombre y Apellido</p></label>
                 <input type="text" name="nombre" placeholder="Por ej: John Smith" />
                 
-                <label for="edad"><p>Fecha De Nacimiento</p></label>
+                <label for="edad"><p>Edad</p></label>
                 <input type="number" name="edad" id="edad">
                 
                 <label for="mail"><p>Mail</p></label>
@@ -68,7 +69,7 @@
     <script>
         function valida_envia() {
             if (document.formulario.nombre.value.length == 0) {
-                alert("Tiene que escribir su nombre")
+                alert("Tiene que escribir su nombre.")
                 document.formulario.nombre.focus()
                 return 0;
             }
@@ -82,14 +83,14 @@
                 return 0;
             } else {
                 if (edad < 18) {
-                    alert("Debe ser mayor de 18 años para poder rellenar ese formulario.")
+                    alert("Debe ser mayor de 18 años para poder rellenar este formulario.")
                     document.formulario.edad.focus()
                     return 0;
                 }
             }
 
             if (document.formulario.mail.value.length == 0) {
-                alert("Tiene que escribir su mail")
+                alert("Tiene que escribir su mail.")
                 document.formulario.nombre.focus()
                 return 0;
             }
@@ -100,7 +101,7 @@
                 return 0;
             }
 
-            alert("Su formulario se envió correctamente, pronto te contactaremos");
+            alert("Su formulario se envió correctamente, pronto te contactaremos!");
             document.formulario.submit();
         }
 
